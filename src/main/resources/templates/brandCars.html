@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="" th:href="@{/css/normalize.css}">
+    <link rel="stylesheet" href="" th:href="@{/css/style.css}">
+</head>
+<body>
+<h2 class="section__title accommodation__title">
+  Список машин
+</h2>
+<ul class="accommodation__list flex list__reset">
+    <li class="accommodation__item" th:each="car : ${cars}">
+        <p class="accommodation__item__name" th:text="${car.getName()}"></p>
+        <p class="accommodation__item__place" th:text="${car.getDescription()}"></p>
+        <a class="section__button button__reset accommodation__item__button">Перейти</a>
+    </li>
+</ul>
+</body>
+</html>

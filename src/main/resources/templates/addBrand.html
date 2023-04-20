@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/brands/add" method="post" th:object="${carBrand}" >
+    Название брэнда: <input type="text" name="name"/><br><br>
+    Описание брэнда: <input type="text" name="description"/><br><br>
+    Ссылка на картинку: <input type="text" name="previewImage"/><br><br>
+  <input type="submit" value="Добавить брэнд"/>
+</form>
+</body>
+</html>

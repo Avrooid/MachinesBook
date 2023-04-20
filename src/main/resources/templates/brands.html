@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="" th:href="@{/css/normalize.css}">
+    <link rel="stylesheet" href="" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="container">
+        <h2 class="section__title accommodation__title">
+            Список брэндов
+        </h2>
+        <ul class="accommodation__list flex list__reset">
+            <li class="accommodation__item" th:each="brand : ${brands}">
+                <img class="accommodation__item__photo" th:src="${brand.getPreviewImage()}">
+                <p class="accommodation__item__name" th:text="${brand.getName()}"></p>
+                <p class="accommodation__item__place" th:text="${brand.getDescription()}"></p>
+                <a class="section__button button__reset accommodation__item__button" th:href="@{/brands/{id}(id=${brand.getId()})}">Перейти</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
