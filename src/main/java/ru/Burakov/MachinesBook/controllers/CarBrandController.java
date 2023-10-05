@@ -3,13 +3,11 @@ package ru.Burakov.MachinesBook.controllers;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import ru.Burakov.MachinesBook.models.CarBrand;
 import ru.Burakov.MachinesBook.services.CarBrandService;
-
-import java.io.IOException;
-import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
